@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Nomad Express Hangzhou - Séjours Courts avec Accès Campus Alibaba</title>
+    <meta name="description" content="Séjours courts de 1 à 4 semaines à Hangzhou avec accès exclusif au Campus Alibaba. Testez la Chine tech en immersion courte.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #e67e22;
+            --accent-color: #27ae60;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --border-color: #ecf0f1;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            height: 100px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            top: 100px;
+            margin-bottom: 50px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .alibaba-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .alibaba-logo {
+            font-size: 2rem;
+            color: #ff6a00;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--text-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .pricing-card.best-value {
+            border-color: var(--secondary-color);
+            background: linear-gradient(135deg, #fff5f0 0%, #ffeaa7 100%);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .duration {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .pricing-card.best-value .duration {
+            background: var(--secondary-color);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: var(--text-dark);
+            margin: 1.5rem 0;
+        }
+
+        .pricing-card.featured .price {
+            color: var(--primary-color);
+        }
+
+        .pricing-card.best-value .price {
+            color: var(--secondary-color);
+        }
+
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 40px;
+        }
+
+        .qr-code {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin: 1rem 0;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #667eea;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: fadeInUp 0.3s ease-out;
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        .close:hover {
+            color: var(--text-dark);
+        }
+
+        /* Success message */
+        .success-message {
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <img src="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png" alt="Huaerdai Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#about">Pourquoi Hangzhou ?</a></li>
+                <li><a href="#pricing">Formules</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Digital Nomad Express</h1>
+            <p class="subtitle">Séjours courts à Hangzhou • 1 à 4 semaines</p>
+            
+            <div class="alibaba-badge">
+                <span class="alibaba-logo">Alibaba</span>
+                <span>Campus Access</span>
+            </div>
+            
+            <div style="font-size: 4rem; font-weight: 100; margin: 2rem 0;">2025</div>
+            <p style="font-size: 1.3rem; opacity: 0.9;">Testez la Chine tech en immersion courte</p>
+            
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="openModal('booking')">
+                    <i class="fas fa-calendar-check"></i>
+                    Réserver maintenant
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('pricing')">
+                    <i class="fas fa-info-circle"></i>
+                    Voir les formules
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">Pourquoi Hangzhou + Alibaba ?</h2>
+        <p class="section-subtitle">Découvrez pourquoi Hangzhou est la destination idéale pour les digital nomads</p>
+        
+        <div class="card" style="background: var(--secondary-color); color: white; text-align: center; margin-bottom: 3rem;">
+            <h3 style="color: white; font-size: 2rem;">🏢 Accès exclusif au Campus Alibaba</h3>
+            <p style="font-size: 1.2rem; color: white; opacity: 0.9;">Travaillez dans l'écosystème du géant chinois du e-commerce</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🚄</div>
+                <h3>1h de Shanghai</h3>
+                <p>Position stratégique avec accès facile à la capitale économique chinoise</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>1Gb Internet</h3>
+                <p>Vitesse garantie pour un travail efficace sans interruption</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💰</div>
+                <h3>70€ par jour</h3>
+                <p>Coût moyen de vie abordable pour un séjour confortable</p>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3>🏨 Alibaba Hotel</h3>
+                <ul class="features-list">
+                    <li>Hôtel 4 étoiles intégré</li>
+                    <li>Business center 24/7</li>
+                    <li>Proximité directe campus</li>
+                    <li>Chambres modernes et confortables</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>💼 Environnement tech</h3>
+                <ul class="features-list">
+                    <li>Espaces coworking modernes</li>
+                    <li>Salles de réunion équipées</li>
+                    <li>Networking avec talents locaux</li>
+                    <li>Événements tech réguliers</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing" style="background: var(--bg-light);">
+        <h2 class="section-title">Nos 4 Formules Express</h2>
+        <p class="section-subtitle">Choisissez la durée qui vous convient le mieux</p>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="duration">1 Semaine</div>
+                <h3>Découverte</h3>
+                <div class="price">800€ TTC*</div>
+                <ul class="features-list">
+                    <li>7 nuits Alibaba Hotel</li>
+                    <li>Accès campus 7 jours</li>
+                    <li>Visa touristique 30j</li>
+                    <li>Support 24/7</li>
+                    <li>Petit-déjeuner inclus</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal('booking', '1 Semaine', '800€')">
+                    Réserver
+                </button>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Éco. 100€</div>
+                <div class="duration">2 Semaines</div>
+                <h3>Immersion</h3>
+                <div class="price">1,500€ TTC*</div>
+                <ul class="features-list">
+                    <li>14 nuits Alibaba Hotel</li>
+                    <li>Accès campus 14 jours</li>
+                    <li>Visa touristique 30j</li>
+                    <li>Support 24/7</li>
+                    <li>Petit-déjeuner inclus</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal('booking', '2 Semaines', '1,500€')">
+                    Réserver
+                </button>
+            </div>
+            
+            <div class="pricing-card best-value">
+                <div class="pricing-badge">Éco. 200€</div>
+                <div class="duration">3 Semaines</div>
+                <h3>Exploration</h3>
+                <div class="price">2,200€ TTC*</div>
+                <ul class="features-list">
+                    <li>21 nuits Alibaba Hotel</li>
+                    <li>Accès campus 21 jours</li>
+                    <li>Visa touristique 30j</li>
+                    <li>Support 24/7</li>
+                    <li>Petit-déjeuner inclus</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal('booking', '3 Semaines', '2,200€')">
+                    Réserver
+                </button>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-badge">Éco. 350€</div>
+                <div class="duration">4 Semaines</div>
+                <h3>Intégration</h3>
+                <div class="price">2,850€ TTC*</div>
+                <ul class="features-list">
+                    <li>28 nuits Alibaba Hotel</li>
+                    <li>Accès campus 28 jours</li>
+                    <li>Visa touristique 30j</li>
+                    <li>Support 24/7</li>
+                    <li>Petit-déjeuner inclus</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal('booking', '4 Semaines', '2,850€')">
+                    Réserver
+                </button>
+            </div>
+        </div>
+
+        <div class="card" style="background: var(--primary-color); color: white; text-align: center; margin-top: 3rem;">
+            <h3 style="color: white; font-size: 2rem;">🎯 Offre de lancement 2025</h3>
+            <p style="font-size: 1.2rem; color: white; opacity: 0.9;">Prix tout inclus • Aucun frais caché • Annulation flexible</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; padding: 1rem; background: var(--bg-light); border-radius: 8px; font-size: 0.9rem; color: var(--text-light);">
+            <p><strong>*</strong> Règlement B to B - Facturation professionnelle uniquement</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <h2 class="section-title">Services Inclus</h2>
+        <p class="section-subtitle">Tout ce dont vous avez besoin pour un séjour réussi</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🏨</div>
+                <h3>Hébergement</h3>
+                <p>Alibaba Hotel 4★ avec chambre individuelle et petit-déjeuner inclus</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Workspace</h3>
+                <p>Accès campus Alibaba avec Internet haut débit et salles de réunion</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Digital</h3>
+                <p>VPN professionnel, WiFi sécurisé et support technique</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🤝</div>
+                <h3>Support</h3>
+                <p>Conciergerie multilingue, assistance administrative et contact urgence 24/7</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 3rem;">
+            <h3>📋 Inclus dans toutes les formules</h3>
+            <ul class="features-list">
+                <li>Accueil à l'aéroport (optionnel)</li>
+                <li>Orientation Hangzhou</li>
+                <li>Guide pratique digital</li>
+                <li>Assistance visa</li>
+                <li>Support multilingue</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <h2 class="section-title">Contactez-nous</h2>
+        <p class="section-subtitle">Prêt à partir ? Contactez-nous pour réserver votre séjour</p>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>📱 Contact WeChat</h3>
+                <p>Scannez le QR code pour nous contacter directement sur WeChat</p>
+                
+                <img src="https://ngud.github.io/testBeforeInvest/wechat.jpg" alt="QR Code WeChat" class="qr-code" style="display: block; margin: 0 auto;">
+                
+                <div class="contact-item">
+                    <i class="fas fa-rocket contact-icon"></i>
+                    <div>
+                        <strong>Départ immédiat</strong><br>
+                        Réservation sous 48h • Visa express • Places limitées
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-credit-card contact-icon"></i>
+                    <div>
+                        <strong>Paiement flexible</strong><br>
+                        Acompte 30% • Solde à l'arrivée • Cartes acceptées
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-shield-alt contact-icon"></i>
+                    <div>
+                        <strong>Conditions requises</strong><br>
+                        Passeport valide 6+ mois • Visa touristique chinois • Assurance voyage • Emploi à distance confirmé • Âge minimum 21 ans
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Formulaire de contact</h3>
+                <form id="contactForm" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <label class="form-label">Nom complet *</label>
+                        <input type="text" class="form-input" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-input" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Téléphone</label>
+                        <input type="tel" class="form-input" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Formule souhaitée</label>
+                        <select class="form-select" name="package">
+                            <option value="">Sélectionnez une formule</option>
+                            <option value="1 Semaine - 800€">1 Semaine - 800€</option>
+                            <option value="2 Semaines - 1,500€">2 Semaines - 1,500€</option>
+                            <option value="3 Semaines - 2,200€">3 Semaines - 2,200€</option>
+                            <option value="4 Semaines - 2,850€">4 Semaines - 2,850€</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Date de départ souhaitée</label>
+                        <input type="date" class="form-input" name="departure">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-textarea" name="message" placeholder="Décrivez vos besoins spécifiques..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer le message
+                    </button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    Message envoyé avec succès ! Nous vous recontacterons rapidement.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png" alt="Huaerdai Logo" style="height: 120px; margin-bottom: 2rem;">
+            <p>Digital Nomad Express Hangzhou - Votre passerelle vers l'écosystème tech chinois</p>
+            
+            <div class="footer-links">
+                <a href="#hero">Accueil</a>
+                <a href="#about">À propos</a>
+                <a href="#pricing">Formules</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 10px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h4 style="margin-bottom: 1.5rem;">Informations légales</h4>
+                <div style="font-size: 0.9rem; line-height: 1.6;">
+                    <strong>ZSJ - SAS</strong><br>
+                    15 RUE KLEBER, 93100 MONTREUIL<br>
+                    SIREN : 823 899 570 | N° TVA : FR12823899570<br>
+                    RCS Bobigny 823 899 570
+                </div>
+            </div>
+            
+            <p style="opacity: 0.7; margin-top: 2rem;">© 2025 Digital Nomad Express. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('booking')">&times;</span>
+            <h2>Réserver votre séjour</h2>
+            <p>Formulaire de réservation pour <span id="selectedPackage"></span></p>
+            
+            <form id="bookingForm" onsubmit="submitBookingForm(event)">
+                <div class="form-group">
+                    <label class="form-label">Nom complet *</label>
+                    <input type="text" class="form-input" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email *</label>
+                    <input type="email" class="form-input" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Téléphone *</label>
+                    <input type="tel" class="form-input" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Date de départ souhaitée *</label>
+                    <input type="date" class="form-input" name="departure" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Nombre de personnes</label>
+                    <select class="form-select" name="people">
+                        <option value="1">1 personne</option>
+                        <option value="2">2 personnes</option>
+                        <option value="3">3 personnes</option>
+                        <option value="4">4+ personnes</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Demandes spéciales</label>
+                    <textarea class="form-textarea" name="specialRequests" placeholder="Allergies, préférences alimentaires, besoins particuliers..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-check"></i>
+                    Confirmer la réservation
+                </button>
+            </form>
+            
+            <div class="success-message" id="bookingSuccessMessage">
+                Réservation envoyée ! Nous vous recontacterons sous 24h pour confirmer.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Update navigation links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+
+        // Modal functions
+        function openModal(modalId, package = '', price = '') {
+            const modal = document.getElementById(modalId + 'Modal');
+            if (package && price) {
+                document.getElementById('selectedPackage').textContent = package + ' - ' + price;
+            }
+            modal.style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId + 'Modal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        // Form submissions
+        function submitContactForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const successMessage = document.getElementById('successMessage');
+            
+            // Simulate form submission
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    form.style.display = 'block';
+                    successMessage.style.display = 'none';
+                    form.reset();
+                }, 3000);
+            }, 1000);
+        }
+
+        function submitBookingForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const successMessage = document.getElementById('bookingSuccessMessage');
+            
+            // Simulate form submission
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Close modal after 3 seconds
+                setTimeout(() => {
+                    closeModal('booking');
+                    form.style.display = 'block';
+                    successMessage.style.display = 'none';
+                    form.reset();
+                }, 3000);
+            }, 1000);
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Add fade-in animation to cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card, .pricing-card, .section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 
