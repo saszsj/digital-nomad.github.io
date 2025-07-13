@@ -35,10 +35,28 @@ Digital Nomad Express propose des séjours courts de 1 à 4 semaines à Hangzhou
 
 1. Clonez le dépôt :
 ```bash
-git clone https://github.com/votre-username/digital-nomad-project.git
+git clone https://github.com/nguD/digital-nomad-project.git
 ```
 
 2. Ouvrez `index.html` dans votre navigateur
+
+## 🌐 Déploiement
+
+### Sur Render (Recommandé)
+1. Connectez-vous sur [Render.com](https://render.com)
+2. Cliquez sur "New +" → "Static Site"
+3. Connectez votre dépôt GitHub
+4. Configurez :
+   - **Name** : `digital-nomad-express`
+   - **Build Command** : `echo "Static site - no build required"`
+   - **Publish Directory** : `.`
+5. Cliquez sur "Create Static Site"
+
+### Sur GitHub Pages
+1. Allez dans les paramètres du dépôt GitHub
+2. Activez GitHub Pages
+3. Sélectionnez la branche `main`
+4. Votre site sera disponible sur `https://nguD.github.io/digital-nomad-project`
 
 ## 📄 Structure du projet
 

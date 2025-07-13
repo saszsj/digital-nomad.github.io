@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Nomad Express Hangzhou - Séjours Courts avec Accès Campus Alibaba</title>
-    <meta name="description" content="Séjours courts de 1 à 4 semaines à Hangzhou avec accès exclusif au Campus Alibaba. Testez la Chine tech en immersion courte.">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <title>Digital Nomad Express Hangzhou - Séjours Courts Campus Alibaba 2025</title>
+    <meta name="description" content="Séjours courts de 1 à 4 semaines à Hangzhou avec accès exclusif au Campus Alibaba. Prix tout inclus dès 800€. Testez la Chine tech en immersion courte.">
+    <meta name="keywords" content="digital nomad, hangzhou, alibaba, campus, séjour court, chine tech, coworking, visa chine">
+    <meta name="author" content="Digital Nomad Express">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ngud.github.io/digital-nomad-project/">
+    <meta property="og:title" content="Digital Nomad Express Hangzhou - Campus Alibaba 2025">
+    <meta property="og:description" content="Séjours courts de 1 à 4 semaines à Hangzhou avec accès exclusif au Campus Alibaba. Prix tout inclus dès 800€.">
+    <meta property="og:image" content="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ngud.github.io/digital-nomad-project/">
+    <meta property="twitter:title" content="Digital Nomad Express Hangzhou - Campus Alibaba 2025">
+    <meta property="twitter:description" content="Séjours courts de 1 à 4 semaines à Hangzhou avec accès exclusif au Campus Alibaba. Prix tout inclus dès 800€.">
+    <meta property="twitter:image" content="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png">
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://ngud.github.io">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://ngud.github.io">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png">
+    <link rel="apple-touch-icon" href="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Digital Nomad Express",
+        "description": "Séjours courts de digital nomads à Hangzhou avec accès Campus Alibaba",
+        "url": "https://ngud.github.io/digital-nomad-project/",
+        "logo": "https://ngud.github.io/testBeforeInvest/huaerdai-logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "15 RUE KLEBER",
+            "addressLocality": "MONTREUIL",
+            "postalCode": "93100",
+            "addressCountry": "FR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["French", "English"]
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "EUR",
+            "description": "Séjour 1 semaine avec accès Campus Alibaba"
+        }
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -508,7 +571,14 @@
             }
         }
 
-        /* Animations */
+        /* Performance optimizations */
+        .card,
+        .pricing-card,
+        .section {
+            will-change: transform, opacity;
+        }
+
+        /* Animations with performance optimizations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -522,6 +592,29 @@
 
         .fade-in-up {
             animation: fadeInUp 0.6s ease-out;
+            will-change: auto;
+        }
+
+        /* Optimize for mobile performance */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
         }
 
         /* Modal */
@@ -576,7 +669,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <img src="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png" alt="Huaerdai Logo" class="logo">
+            <img src="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png" alt="Huaerdai Logo - Digital Nomad Express" class="logo" loading="eager" width="200" height="100">
             <ul class="nav-links">
                 <li><a href="#hero">Accueil</a></li>
                 <li><a href="#about">Pourquoi Hangzhou ?</a></li>
@@ -584,8 +677,8 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu mobile" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
@@ -605,12 +698,12 @@
             <p style="font-size: 1.3rem; opacity: 0.9;">Testez la Chine tech en immersion courte</p>
             
             <div class="cta-buttons">
-                <button class="btn btn-primary" onclick="openModal('booking')">
-                    <i class="fas fa-calendar-check"></i>
+                <button class="btn btn-primary" onclick="openModal('booking')" aria-label="Réserver un séjour Digital Nomad Express">
+                    <i class="fas fa-calendar-check" aria-hidden="true"></i>
                     Réserver maintenant
                 </button>
-                <button class="btn btn-secondary" onclick="scrollToSection('pricing')">
-                    <i class="fas fa-info-circle"></i>
+                <button class="btn btn-secondary" onclick="scrollToSection('pricing')" aria-label="Voir les formules de séjour">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
                     Voir les formules
                 </button>
             </div>
@@ -801,7 +894,7 @@
                 <h3>📱 Contact WeChat</h3>
                 <p>Scannez le QR code pour nous contacter directement sur WeChat</p>
                 
-                <img src="https://ngud.github.io/testBeforeInvest/wechat.jpg" alt="QR Code WeChat" class="qr-code" style="display: block; margin: 0 auto;">
+                <img src="https://ngud.github.io/testBeforeInvest/wechat.jpg" alt="QR Code WeChat - Contact Digital Nomad Express" class="qr-code" style="display: block; margin: 0 auto;" loading="lazy" width="200" height="200">
                 
                 <div class="contact-item">
                     <i class="fas fa-rocket contact-icon"></i>
@@ -831,15 +924,15 @@
             <div class="contact-info">
                 <h3>Formulaire de contact</h3>
                 <form id="contactForm" onsubmit="submitContactForm(event)">
-                    <div class="form-group">
-                        <label class="form-label">Nom complet *</label>
-                        <input type="text" class="form-input" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Email *</label>
-                        <input type="email" class="form-input" name="email" required>
-                    </div>
+                                    <div class="form-group">
+                    <label class="form-label" for="contact-name">Nom complet *</label>
+                    <input type="text" class="form-input" id="contact-name" name="name" required autocomplete="name">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="contact-email">Email *</label>
+                    <input type="email" class="form-input" id="contact-email" name="email" required autocomplete="email">
+                </div>
                     
                     <div class="form-group">
                         <label class="form-label">Téléphone</label>
@@ -883,7 +976,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <img src="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png" alt="Huaerdai Logo" style="height: 120px; margin-bottom: 2rem;">
+            <img src="https://ngud.github.io/testBeforeInvest/huaerdai-logo.png" alt="Huaerdai Logo - Digital Nomad Express" style="height: 120px; margin-bottom: 2rem;" loading="lazy" width="240" height="120">
             <p>Digital Nomad Express Hangzhou - Votre passerelle vers l'écosystème tech chinois</p>
             
             <div class="footer-links">
@@ -917,13 +1010,13 @@
             
             <form id="bookingForm" onsubmit="submitBookingForm(event)">
                 <div class="form-group">
-                    <label class="form-label">Nom complet *</label>
-                    <input type="text" class="form-input" name="name" required>
+                    <label class="form-label" for="booking-name">Nom complet *</label>
+                    <input type="text" class="form-input" id="booking-name" name="name" required autocomplete="name">
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Email *</label>
-                    <input type="email" class="form-input" name="email" required>
+                    <label class="form-label" for="booking-email">Email *</label>
+                    <input type="email" class="form-input" id="booking-email" name="email" required autocomplete="email">
                 </div>
                 
                 <div class="form-group">
@@ -964,15 +1057,29 @@
     </div>
 
     <script>
-        // Navigation scroll effect
-        window.addEventListener('scroll', function() {
+        // Performance optimization: Throttle scroll events
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+
+        // Navigation scroll effect with throttling
+        window.addEventListener('scroll', throttle(function() {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
-        });
+        }, 16)); // ~60fps
 
         // Smooth scrolling for navigation links
         function scrollToSection(sectionId) {
@@ -1059,7 +1166,7 @@
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         }
 
-        // Add fade-in animation to cards
+        // Performance optimization: Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1069,13 +1176,18 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('fade-in-up');
+                    // Unobserve after animation to improve performance
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe all cards and sections
-        document.querySelectorAll('.card, .pricing-card, .section').forEach(el => {
-            observer.observe(el);
+        // Observe all cards and sections with performance optimization
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToObserve = document.querySelectorAll('.card, .pricing-card, .section');
+            elementsToObserve.forEach(el => {
+                observer.observe(el);
+            });
         });
     </script>
 </body>
