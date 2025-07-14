@@ -122,9 +122,9 @@
         }
 
         .logo {
-            height: 65px;
+            height: 50px;
             width: auto;
-            margin: 17px 0px;
+            margin: 17px 50px 17px 0px;
         }
 
         .nav-links {
@@ -711,6 +711,13 @@
             #lang-switcher {
                 width: 100%;
                 margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn,
+            .lang-switcher-container {
+                display: none !important;
             }
         }
     </style>
