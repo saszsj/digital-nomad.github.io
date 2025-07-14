@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Nomad Express Hangzhou - Estancias Cortas con Acceso al Campus Alibaba 2025</title>
+    <meta name="description" content="Estancias cortas de 1 a 4 semanas en Hangzhou con acceso exclusivo al Campus Alibaba. Precio todo incluido desde 800€. Vive la tecnología china en una inmersión corta.">
+    <meta name="keywords" content="digital nomad, hangzhou, alibaba, campus, estancia corta, tecnología china, coworking, visado china">
+    <meta name="author" content="Digital Nomad Express">
+    <meta name="robots" content="index, follow">
+    <!-- ... CSS y scripts idénticos a la versión francesa ... -->
+    <style>
+    /* ... CSS igual ... */
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <img src="chineExploration-X-Huaerdai.png" alt="Logo Chine Exploration x Huaerdai" class="logo" loading="eager">
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">¿Por qué Hangzhou?</a></li>
+                <li><a href="#pricing">Paquetes</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <select id="lang-switcher" aria-label="Selector de idioma" style="margin-left: 1rem; padding: 0.3rem 0.7rem; border-radius: 8px; border: 1px solid #ccc;">
+                <option value="index.html">Français</option>
+                <option value="index-en.html">English</option>
+                <option value="index-it.html">Italiano</option>
+                <option value="index-es.html" selected>Español</option>
+            </select>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menú móvil" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Digital Nomad Express</h1>
+            <p class="subtitle">Estancias cortas en Hangzhou • de 1 a 4 semanas</p>
+            <div class="alibaba-badge">
+                <span class="alibaba-logo">Alibaba</span>
+                <span>Acceso Campus</span>
+            </div>
+            <div style="font-size: 4rem; font-weight: 100; margin: 2rem 0;">2025</div>
+            <p style="font-size: 1.3rem; opacity: 0.9;">Vive la tecnología china en una inmersión corta</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="openModal('booking')" aria-label="Reserva tu estancia Digital Nomad Express">
+                    <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                    Reservar ahora
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('pricing')" aria-label="Ver paquetes">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    Ver paquetes
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">¿Por qué Hangzhou + Alibaba?</h2>
+        <p class="section-subtitle">Descubre por qué Hangzhou es el destino ideal para nómadas digitales</p>
+        <div class="card" style="background: var(--secondary-color); color: white; text-align: center; margin-bottom: 3rem;">
+            <h3 style="color: white; font-size: 2rem;">🏢 Acceso exclusivo al Campus Alibaba</h3>
+            <p style="font-size: 1.2rem; color: white; opacity: 0.9;">Trabaja en el ecosistema del gigante chino del e-commerce</p>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🚄</div>
+                <h3>1h de Shanghái</h3>
+                <p>Ubicación estratégica con fácil acceso a la capital económica china</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>1Gb Internet</h3>
+                <p>Velocidad garantizada para trabajar sin interrupciones</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💰</div>
+                <h3>70€ al día</h3>
+                <p>Costo de vida asequible para una estancia cómoda</p>
+            </div>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>🏨 Alibaba Hotel</h3>
+                <ul class="features-list">
+                    <li>Hotel 4 estrellas integrado</li>
+                    <li>Business center 24/7</li>
+                    <li>Cercanía directa al campus</li>
+                    <li>Habitaciones modernas y cómodas</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>💼 Entorno tech</h3>
+                <ul class="features-list">
+                    <li>Espacios coworking modernos</li>
+                    <li>Salas de reuniones equipadas</li>
+                    <li>Networking con talento local</li>
+                    <li>Eventos tech regulares</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section class="section" id="pricing" style="background: var(--bg-light);">
+        <h2 class="section-title">Nuestros 4 Paquetes Express</h2>
+        <p class="section-subtitle">Elige la duración que más te convenga</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="duration">1 Semana</div>
+                <h3>Descubrimiento</h3>
+                <div class="price">800€ IVA incl.*</div>
+                <ul class="features-list">
+                    <li>7 noches Alibaba Hotel</li>
+                    <li>7 días acceso campus</li>
+                    <li>Visado turístico 30 días</li>
+                    <li>Soporte 24/7</li>
+                    <li>Desayuno incluido</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal('booking', '1 Semana', '800€')">
+                    Reservar
+                </button>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Ahorra 100€</div>
+                <div class="duration">2 Semanas</div>
+                <h3>Inmersión</h3>
+                <div class="price">1.500€ IVA incl.*</div>
+                <ul class="features-list">
+                    <li>14 noches Alibaba Hotel</li>
+                    <li>14 días acceso campus</li>
+                    <li>Visado turístico 30 días</li>
+                    <li>Soporte 24/7</li>
+                    <li>Desayuno incluido</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal('booking', '2 Semanas', '1.500€')">
+                    Reservar
+                </button>
+            </div>
+            <div class="pricing-card best-value">
+                <div class="pricing-badge">Ahorra 200€</div>
+                <div class="duration">3 Semanas</div>
+                <h3>Exploración</h3>
+                <div class="price">2.200€ IVA incl.*</div>
+                <ul class="features-list">
+                    <li>21 noches Alibaba Hotel</li>
+                    <li>21 días acceso campus</li>
+                    <li>Visado turístico 30 días</li>
+                    <li>Soporte 24/7</li>
+                    <li>Desayuno incluido</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal('booking', '3 Semanas', '2.200€')">
+                    Reservar
+                </button>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-badge">Ahorra 350€</div>
+                <div class="duration">4 Semanas</div>
+                <h3>Integración</h3>
+                <div class="price">2.850€ IVA incl.*</div>
+                <ul class="features-list">
+                    <li>28 noches Alibaba Hotel</li>
+                    <li>28 días acceso campus</li>
+                    <li>Visado turístico 30 días</li>
+                    <li>Soporte 24/7</li>
+                    <li>Desayuno incluido</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal('booking', '4 Semanas', '2.850€')">
+                    Reservar
+                </button>
+            </div>
+        </div>
+        <div class="card" style="background: var(--primary-color); color: white; text-align: center; margin-top: 3rem;">
+            <h3 style="color: white; font-size: 2rem;">🎯 Oferta de lanzamiento 2025</h3>
+            <p style="font-size: 1.2rem; color: white; opacity: 0.9;">Precio todo incluido • Sin costes ocultos • Cancelación flexible</p>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; padding: 1rem; background: var(--bg-light); border-radius: 8px; font-size: 0.9rem; color: var(--text-light);">
+            <p><strong>*</strong> Pago B2B - Facturación profesional</p>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <h2 class="section-title">Servicios Incluidos</h2>
+        <p class="section-subtitle">Todo lo que necesitas para una estancia exitosa</p>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🏨</div>
+                <h3>Alojamiento</h3>
+                <p>Alibaba Hotel 4★ con habitación privada y desayuno incluido</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Workspace</h3>
+                <p>Acceso al campus Alibaba con internet de alta velocidad y salas de reuniones</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Digital</h3>
+                <p>VPN profesional, WiFi seguro y soporte técnico</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🤝</div>
+                <h3>Soporte</h3>
+                <p>Conserjería multilingüe, asistencia administrativa y contacto de emergencia 24/7</p>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 3rem;">
+            <h3>📋 Incluido en todos los paquetes</h3>
+            <ul class="features-list">
+                <li>Recogida en el aeropuerto (opcional)</li>
+                <li>Orientación Hangzhou</li>
+                <li>Guía digital de bienvenida</li>
+                <li>Asistencia con el visado</li>
+                <li>Soporte multilingüe</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Locaux Digital Nomad Alibaba -->
+    <section class="section" id="locaux-alibaba">
+        <h2 class="section-title">Nuestros espacios en el campus Alibaba</h2>
+        <p class="section-subtitle">Un entorno moderno, inspirador y conectado para nómadas digitales</p>
+        <div class="gallery-grid">
+            <img src="images/1.jpg" alt="Espacio Digital Nomad 1" loading="lazy">
+            <img src="images/2.jpg" alt="Espacio Digital Nomad 2" loading="lazy">
+            <img src="images/3.jpg" alt="Espacio Digital Nomad 3" loading="lazy">
+            <img src="images/4.jpg" alt="Espacio Digital Nomad 4" loading="lazy">
+            <img src="images/5.jpg" alt="Espacio Digital Nomad 5" loading="lazy">
+            <img src="images/6.jpg" alt="Espacio Digital Nomad 6" loading="lazy">
+            <img src="images/7.jpg" alt="Espacio Digital Nomad 7" loading="lazy">
+            <img src="images/8.jpg" alt="Espacio Digital Nomad 8" loading="lazy">
+            <img src="images/9.jpg" alt="Espacio Digital Nomad 9" loading="lazy">
+            <img src="images/10.jpg" alt="Espacio Digital Nomad 10" loading="lazy">
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-subtitle">¿Listo para partir? Contáctanos para reservar tu estancia</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>📱 Contacto WeChat</h3>
+                <p>Escanea el código QR para contactarnos directamente por WeChat</p>
+                <img src="wechat.jpg" alt="Código QR WeChat - Contacto Digital Nomad Express" class="qr-code" style="display: block; margin: 0 auto; max-width: 200px; width: 100%; height: auto;" loading="lazy">
+                <div class="contact-item">
+                    <i class="fas fa-rocket contact-icon"></i>
+                    <div>
+                        <strong>Salida inmediata</strong><br>
+                        Reserva en 48h • Visado express • Plazas limitadas
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-credit-card contact-icon"></i>
+                    <div>
+                        <strong>Pago flexible</strong><br>
+                        Depósito 30% • Saldo a la llegada • Tarjetas aceptadas
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-shield-alt contact-icon"></i>
+                    <div>
+                        <strong>Requisitos</strong><br>
+                        Pasaporte válido 6+ meses • Visado turístico chino • Seguro de viaje • Trabajo remoto confirmado • Edad mínima 21 años
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Formulario de contacto</h3>
+                <form id="contactForm" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <label class="form-label" for="contact-name">Nombre completo *</label>
+                        <input type="text" class="form-input" id="contact-name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contact-email">Email *</label>
+                        <input type="email" class="form-input" id="contact-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Teléfono</label>
+                        <input type="tel" class="form-input" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Paquete deseado</label>
+                        <select class="form-select" name="package">
+                            <option value="">Selecciona un paquete</option>
+                            <option value="1 Semana - 800€">1 Semana - 800€</option>
+                            <option value="2 Semanas - 1.500€">2 Semanas - 1.500€</option>
+                            <option value="3 Semanas - 2.200€">3 Semanas - 2.200€</option>
+                            <option value="4 Semanas - 2.850€">4 Semanas - 2.850€</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Fecha de salida deseada</label>
+                        <input type="date" class="form-input" name="departure">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-textarea" name="message" placeholder="Describe tus necesidades específicas..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar mensaje
+                    </button>
+                </form>
+                <div class="success-message" id="successMessage">
+                    ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="chineExploration-X-Huaerdai.png" alt="Logo Chine Exploration x Huaerdai" style="height: 70px; width: auto; margin-bottom: 2rem;" loading="lazy">
+            <p>Digital Nomad Express Hangzhou - Tu puerta de entrada al ecosistema tech chino</p>
+            <div class="footer-links">
+                <a href="#hero">Inicio</a>
+                <a href="#about">Sobre nosotros</a>
+                <a href="#pricing">Paquetes</a>
+                <a href="#services">Servicios</a>
+                <a href="#contact">Contacto</a>
+            </div>
+            <div style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 10px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h4 style="margin-bottom: 1.5rem;">Información legal</h4>
+                <div style="font-size: 0.9rem; line-height: 1.6;">
+                    <strong>ZSJ - SAS</strong><br>
+                    15 RUE KLEBER, 93100 MONTREUIL<br>
+                    SIREN: 823 899 570 | NIF: FR12823899570<br>
+                    RCS Bobigny 823 899 570
+                </div>
+            </div>
+            <p style="opacity: 0.7; margin-top: 2rem;">© 2025 Digital Nomad Express. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('booking')">&times;</span>
+            <h2>Reserva tu estancia</h2>
+            <p>Formulario de reserva para <span id="selectedPackage"></span></p>
+            <form id="bookingForm" onsubmit="submitBookingForm(event)">
+                <div class="form-group">
+                    <label class="form-label" for="booking-name">Nombre completo *</label>
+                    <input type="text" class="form-input" id="booking-name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="booking-email">Email *</label>
+                    <input type="email" class="form-input" id="booking-email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Teléfono *</label>
+                    <input type="tel" class="form-input" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Fecha de salida deseada *</label>
+                    <input type="date" class="form-input" name="departure" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Número de personas</label>
+                    <select class="form-select" name="people">
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4+ personas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Solicitudes especiales</label>
+                    <textarea class="form-textarea" name="specialRequests" placeholder="Alergias, preferencias alimentarias, necesidades especiales..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-check"></i>
+                    Confirmar reserva
+                </button>
+            </form>
+            <div class="success-message" id="bookingSuccessMessage">
+                ¡Reserva enviada! Nos pondremos en contacto contigo en 24h para confirmar.
+            </div>
+        </div>
+    </div>
+    <script>
+    document.getElementById('lang-switcher').addEventListener('change', function() {
+        window.location.href = this.value;
+    });
+    // ... conservar los scripts JS existentes ...
+    </script>
+</body>
+</html> 
