@@ -122,8 +122,9 @@
         }
 
         .logo {
-            height: 100px;
+            height: 65px;
             width: auto;
+            margin: 17px 0px;
         }
 
         .nav-links {
@@ -669,7 +670,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <img src="huaerdai-logo.png" alt="Huaerdai Logo - Digital Nomad Express" class="logo" loading="eager">
+            <img src="chineExploration-X-Huaerdai.png" alt="Logo Chine Exploration x Huaerdai" class="logo" loading="eager">
             <ul class="nav-links">
                 <li><a href="#hero">Accueil</a></li>
                 <li><a href="#about">Pourquoi Hangzhou ?</a></li>
@@ -976,7 +977,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <img src="huaerdai-logo.png" alt="Huaerdai Logo - Digital Nomad Express" style="height: 120px; width: auto; margin-bottom: 2rem;" loading="lazy">
+            <img src="chineExploration-X-Huaerdai.png" alt="Logo Chine Exploration x Huaerdai" style="height: 70px; width: auto; margin-bottom: 2rem;" loading="lazy">
             <p>Digital Nomad Express Hangzhou - Votre passerelle vers l'écosystème tech chinois</p>
             
             <div class="footer-links">
@@ -1124,20 +1125,23 @@
         function submitContactForm(event) {
             event.preventDefault();
             const form = event.target;
-            const successMessage = document.getElementById('successMessage');
-            
-            // Simulate form submission
-            setTimeout(() => {
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-                
-                // Reset form after 3 seconds
-                setTimeout(() => {
-                    form.style.display = 'block';
-                    successMessage.style.display = 'none';
-                    form.reset();
-                }, 3000);
-            }, 1000);
+            const name = form.name.value;
+            const email = form.email.value;
+            const phone = form.phone.value;
+            const pack = form.package.value;
+            const departure = form.departure.value;
+            const message = form.message.value;
+
+            let body = '';
+            body += 'Nom complet : ' + name + '%0D%0A';
+            body += 'Email : ' + email + '%0D%0A';
+            if(phone) body += 'Téléphone : ' + phone + '%0D%0A';
+            if(pack) body += 'Formule souhaitée : ' + pack + '%0D%0A';
+            if(departure) body += 'Date de départ souhaitée : ' + departure + '%0D%0A';
+            if(message) body += 'Message : ' + encodeURIComponent(message) + '%0D%0A';
+
+            const mailto = `mailto:contact@chineexp.com?subject=Contact%20depuis%20Digital%20Nomad%20Express&body=${body}`;
+            window.location.href = mailto;
         }
 
         function submitBookingForm(event) {
