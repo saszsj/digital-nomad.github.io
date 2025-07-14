@@ -10,8 +10,30 @@
     <meta name="robots" content="index, follow">
     <!-- ... conserver le CSS et scripts existants ... -->
     <style>
-    /* ... CSS identique à la version française ... */
-    /* Add CSS to align the language selector to the right */
+/* CSS copié strictement depuis index.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e67e22;
+    --accent-color: #27ae60;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-light: #f8f9fa;
+    --border-color: #ecf0f1;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+}
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+/* Add CSS to align the language selector to the right */
 .lang-switcher-container {
     margin-left: auto;
     display: flex;

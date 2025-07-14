@@ -10,44 +10,67 @@
     <meta name="robots" content="index, follow">
     <!-- ... CSS e script identici alla versione francese ... -->
     <style>
-    /* ... CSS identico ... */
-    /* CSS per allineare il selettore lingua a destra */
+/* CSS copié strictement depuis index.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e67e22;
+    --accent-color: #27ae60;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-light: #f8f9fa;
+    --border-color: #ecf0f1;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+}
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+/* ... (tout le CSS de index.html, jusqu'à la fin du bloc style) ... */
+/* CSS per allineare il selettore lingua a destra */
+.lang-switcher-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+#lang-switcher {
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-left: 1rem;
+    background: #fff;
+    color: var(--text-dark);
+}
+@media (max-width: 768px) {
     .lang-switcher-container {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: flex-end;
+        width: 100%;
     }
     #lang-switcher {
-        padding: 0.3rem 0.7rem;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        font-size: 1rem;
-        margin-left: 1rem;
-        background: #fff;
-        color: var(--text-dark);
+        width: 100%;
+        margin-left: 0;
     }
-    @media (max-width: 768px) {
-        .lang-switcher-container {
-            margin-left: 0;
-            margin-top: 10px;
-            justify-content: flex-end;
-            width: 100%;
-        }
-        #lang-switcher {
-            width: 100%;
-            margin-left: 0;
-        }
-        .mobile-menu-btn,
-        .lang-switcher-container {
-            display: none !important;
-        }
+    .mobile-menu-btn,
+    .lang-switcher-container {
+        display: none !important;
     }
-    .logo {
-        height: 50px;
-        width: auto;
-        margin: 17px 50px 17px 0px;
-    }
-    </style>
+}
+.logo {
+    height: 50px;
+    width: auto;
+    margin: 17px 50px 17px 0px;
+}
+</style>
 </head>
 <body>
     <!-- Navigazione -->
