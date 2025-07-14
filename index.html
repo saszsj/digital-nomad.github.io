@@ -1007,15 +1007,15 @@
             <div class="contact-info">
                 <h3>Formulaire de contact</h3>
                 <form id="contactForm" onsubmit="submitContactForm(event)">
-                                    <div class="form-group">
+                    <div class="form-group">
                     <label class="form-label" for="contact-name">Nom complet *</label>
                     <input type="text" class="form-input" id="contact-name" name="name" required autocomplete="name">
-                </div>
-                
-                <div class="form-group">
+                    </div>
+                    
+                    <div class="form-group">
                     <label class="form-label" for="contact-email">Email *</label>
                     <input type="email" class="form-input" id="contact-email" name="email" required autocomplete="email">
-                </div>
+                    </div>
                     
                     <div class="form-group">
                         <label class="form-label">Téléphone</label>
@@ -1272,14 +1272,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             const elementsToObserve = document.querySelectorAll('.card, .pricing-card, .section');
             elementsToObserve.forEach(el => {
-                observer.observe(el);
+            observer.observe(el);
             });
         });
     </script>
     <script>
 document.getElementById('lang-switcher').addEventListener('change', function() {
     window.location.href = this.value;
-});
-</script>
+        });
+    </script>
 </body>
 </html> 
