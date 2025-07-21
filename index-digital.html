@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Expedition China - Unlock Innovation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-select {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 8px center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            padding-right: 32px;
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-select:hover {
+            border-color: #3498db;
+        }
+
+        .lang-select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #3498db;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        /* Why Section */
+        .why-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .why-item {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .why-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .why-item h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .why-item p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* Companies Section */
+        .companies {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .company-card {
+            background: #f8f9fa;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .company-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .company-logo {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .company-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .company-sector {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid #3498db;
+            transform: scale(1.05);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .pricing-subtitle {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #e74c3c;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f1f1;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .pricing-cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #2c3e50;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+
+        .qr-section {
+            text-align: center;
+        }
+
+        .qr-code {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border: 3px solid #3498db;
+            border-radius: 15px;
+            margin: 20px auto;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-left {
+            animation: fadeInLeft 0.6s ease-out;
+        }
+
+        .fade-in-right {
+            animation: fadeInRight 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/chineExploration-X-Huaerdai.png" alt="Logo">
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#pourquoi">Pourquoi la Chine ?</a></li>
+                        <li><a href="#qui-nous-sommes">Qui nous sommes</a></li>
+                        <li><a href="#entreprises">Entreprises</a></li>
+                        <li><a href="#formules">Formules</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="language-selector">
+                    <select class="lang-select" onchange="changeLanguage(this.value)">
+                        <option value="index.html" selected>🇫🇷 Français</option>
+                        <option value="index-en.html">🇺🇸 English</option>
+                        <option value="index-zh.html">🇨🇳 中文</option>
+                        <option value="index-es.html">🇪🇸 Español</option>
+                        <option value="index-it.html">🇮🇹 Italiano</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <h1>Learning Expedition China</h1>
+            <h2>Immersion stratégique dans l'écosystème tech chinois qui redéfinit l'innovation mondiale</h2>
+            
+            <div class="hero-buttons">
+                <a href="#formules" class="btn-primary">Réserver maintenant</a>
+                <a href="#formules" class="btn-secondary">Voir les formules</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">La Silicon Valley de la Chine</h2>
+            <div class="stats-grid">
+                <div class="stat-item fade-in-up">
+                    <span class="stat-number">+15&nbsp;000</span>
+                    <div class="stat-label">entreprises tech</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <span class="stat-number">Top 3</span>
+                    <div class="stat-label">villes chinoises attractives</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <span class="stat-number">45 min</span>
+                    <div class="stat-label">de Shanghai en TGV</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <span class="stat-number">+10%</span>
+                    <div class="stat-label">croissance PIB annuelle</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section" id="pourquoi">
+        <div class="container">
+            <h2 class="section-title">Pourquoi Hangzhou + Alibaba ?</h2>
+            
+            <div class="why-grid">
+                <div class="why-item fade-in-up">
+                    <div class="why-icon">🏢</div>
+                    <h3>1. Capitale tech dynamique</h3>
+                    <p>Hangzhou, berceau d'Alibaba, est un hub majeur de l'innovation en Chine – idéal pour explorer les tendances tech et business.</p>
+                </div>
+                
+                <div class="why-item fade-in-up">
+                    <div class="why-icon">🚄</div>
+                    <h3>2. Tradition & modernité</h3>
+                    <p>Ville historique au charme reconnu (Lac de l'Ouest UNESCO), Hangzhou allie culture millénaire et style de vie moderne.</p>
+                </div>
+                
+                <div class="why-item fade-in-up">
+                    <div class="why-icon">⚡</div>
+                    <h3>3. Ville en plein essor</h3>
+                    <p>Hangzhou connaît un développement rapide, soutenu par des politiques favorables à l'innovation et aux échanges internationaux – une ville d'avenir à découvrir dès aujourd'hui.</p>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="companies" id="entreprises">
+        <div class="container">
+            <h2 class="section-title">8 Entreprises Leaders Visitées partenaires</h2>
+            <p style="text-align: center; color: #7f8c8d; margin-bottom: 50px;">Accès exclusif garanti à Hangzhou</p>
+            
+            <div class="companies-grid">
+                <div class="company-card fade-in-up">
+                    <div class="company-logo">
+                        <img src="images/alibaba logo.png" alt="Alibaba Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="company-name">Alibaba</div>
+                    <div class="company-sector">E-commerce Global</div>
+                </div>
+                
+                <div class="company-card fade-in-up">
+                    <div class="company-logo">
+                        <img src="images/rokid.png" alt="Rokid Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="company-name">Rokid</div>
+                    <div class="company-sector">XR & IA</div>
+                </div>
+                
+                <div class="company-card fade-in-up">
+                    <div class="company-logo">
+                        <img src="images/library_logos_cainiao_large.png" alt="CAINIAO Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="company-name">CAINIAO</div>
+                    <div class="company-sector">Logistique Alibaba</div>
+                </div>
+                
+                <div class="company-card fade-in-up">
+                    <div class="company-logo">
+                        <img src="images/Hikvision-Logo.png" alt="Hikvision Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="company-name">Hikvision</div>
+                    <div class="company-sector">Sécurité Intelligente</div>
+                </div>
+                
+                <div class="company-card fade-in-up">
+                    <div class="company-logo">
+                        <img src="images/Netease logo.png" alt="NetEase Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="company-name">NetEase</div>
+                    <div class="company-sector">Gaming & Tech</div>
+                </div>
+                
+                <div class="company-card fade-in-up" style="visibility: hidden;">
+                    <div class="company-logo"></div>
+                    <div class="company-name"></div>
+                    <div class="company-sector"></div>
+                </div>
+                
+
+                
+                <div class="company-card fade-in-up">
+                    <div class="company-logo">🏭</div>
+                    <div class="company-name">Constructeur Auto</div>
+                    <div class="company-sector">Véhicules Électriques</div>
+                </div>
+                
+                <div class="company-card fade-in-up">
+                    <div class="company-logo">🏢</div>
+                    <div class="company-name">Hangzhou-Chengxi Sci-Tech Innovation Corridor</div>
+                    <div class="company-sector">Future Sci-Tech City Exhibition Center</div>
+                </div>
+                
+                <div class="company-card fade-in-up">
+                    <div class="company-logo">🌍</div>
+                    <div class="company-name">HIT EIP</div>
+                    <div class="company-sector">Hangzhou International Talent Entrepreneurship and Innovation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="formules">
+        <div class="container">
+            <h2 class="section-title">Nos 3 Formules d'Exception</h2>
+            <p style="text-align: center; color: #7f8c8d; margin-bottom: 50px;">Adaptées à vos objectifs et profil</p>
+            
+            <div class="pricing-grid">
+                <!-- Écoles et Étudiants -->
+                <div class="pricing-card fade-in-up">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">🎓<br>Découverte<br>Académique</h3>
+                        <p class="pricing-subtitle">Écoles avec étudiants • 7 jours</p>
+                    </div>
+                    
+                    <div class="pricing-price" style="margin-bottom: 0;">Sur devis</div>
+                    <p class="pricing-subtitle" style="text-align: center;">pour un groupe 20 personnes</p>
+                    
+                    <ul class="pricing-features">
+                        <li>8 entreprises technologiques visitées</li>
+                        <li>Accompagnement bilingue</li>
+                        <li>Hébergement 4* + transport</li>
+                        <li>Accès VPN sécurisé</li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn-primary">Demander un devis</a>
+                    </div>
+                </div>
+
+                <!-- Freelances et Petites Entreprises -->
+                <div class="pricing-card featured fade-in-up">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">🚀<br>Parcours<br>Business</h3>
+                        <p class="pricing-subtitle">Freelances & PME • 7 jours</p>
+                    </div>
+                    
+                    <div class="pricing-price" style="
+                    margin-bottom: 0px;
+                ">3 599€ HT</div>
+                    <div style="text-align:center; color:#27ae60; font-weight:600; margin-bottom:10px; font-size:1.1rem;">Early bird : <span style='text-decoration:line-through; color:#7f8c8d; font-weight:400;'>3 599€</span> <span style='color:#27ae60;'>3 299€ HT</span></div>
+                    
+                    <ul class="pricing-features">
+                        <li>8 entreprises technologiques visitées</li>
+                        <li>Accompagnement bilingue</li>
+                        <li>Hébergement 4* + transport</li>
+                        <li>Accès VPN sécurisé</li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn-primary">Réserver maintenant</a>
+                    </div>
+                </div>
+
+                <!-- Grandes Entreprises -->
+                <div class="pricing-card fade-in-up">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">🏢<br>Programme<br>Corporate</h3>
+                        <p class="pricing-subtitle">Grandes entreprises • Sur mesure</p>
+                    </div>
+                    
+                    <div class="pricing-price">Sur devis</div>
+                    
+                    <ul class="pricing-features">
+                        <li>8 entreprises technologiques visitées</li>
+                        <li>Accompagnement bilingue</li>
+                        <li>Hébergement 4* + transport</li>
+                        <li>Accès VPN sécurisé</li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn-primary">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <h3 style="color: #e74c3c; margin-bottom: 20px;">🎯 Offre de lancement 2025</h3>
+                <p style="color: #7f8c8d; margin-bottom: 20px;">Prix tout inclus sauf vol en option • Aucun frais caché • Annulation flexible</p>
+                <p style="font-weight: 500; color: #2c3e50; margin-bottom: 20px;"><strong>Places limitées :</strong> Maximum 20 participants par expedition</p>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                    <h4 style="color: #2c3e50; margin-bottom: 15px;">📅 Sessions disponibles :</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px; text-align: left; max-width: 400px; margin: 0 auto;">
+                        <div style="padding: 10px; background: white; border-radius: 6px; border-left: 4px solid #3498db;">
+                            <strong>Session 1 :</strong> 13 septembre au 20 septembre 2025
+                        </div>
+                        <div style="padding: 10px; background: white; border-radius: 6px; border-left: 4px solid #e74c3c;">
+                            <strong>Session 2 :</strong> 25 octobre au 1er novembre 2025
+                        </div>
+                        <div style="padding: 10px; background: white; border-radius: 6px; border-left: 4px solid #27ae60;">
+                            <strong>Session 3 :</strong> 8 novembre au 15 novembre 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; font-weight: 300; color: #2c3e50; margin-bottom: 20px;">Découvrez quelques images de l'expédition</h2>
+                <p style="font-size: 1.2rem; color: #7f8c8d; max-width: 600px; margin: 0 auto;">Plongez dans l'expérience Learning Expedition à travers ces clichés authentiques de nos précédents voyages</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 30px;">
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3051.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3083.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3103.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3110.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3115.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3258.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3271.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3290.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3730.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3739.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3754.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3785.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3796.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3812.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/learning-expedition/IMG_3888.jpg" alt="Learning Expedition China" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: #7f8c8d; font-size: 1.1rem; margin-bottom: 30px;">Ces images ne représentent qu'un aperçu de l'expérience complète qui vous attend</p>
+                <a href="#contact" class="btn-primary" style="display: inline-block;">Découvrir l'expédition complète</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="qui-nous-sommes" style="padding: 80px 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">Qui nous sommes</h2>
+            <p style="text-align: center; color: #7f8c8d; margin-bottom: 50px; font-size: 1.2rem;">Votre pont vers l'innovation chinoise</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 50px;">
+                <div class="about-content fade-in-left">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 16px; color: white; margin-bottom: 30px;">
+                        <img src="images/chineExploration-X-Huaerdai.png" alt="Chine Exploration x Huaerdai" style="height: 60px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
+                        <p style="font-size: 1.1rem; line-height: 1.7; opacity: 0.95;">Une marque dédiée à faire découvrir la Chine aux étrangers, facilitant la découverte de ce pays fascinant et l'exploration des partenariats possibles.</p>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; border-left: 4px solid #3498db;">
+                        <h4 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.2rem;">🎯 Notre Mission</h4>
+                        <p style="color: #7f8c8d; line-height: 1.6;">Connecter les entrepreneurs, investisseurs et professionnels du monde entier avec l'écosystème d'innovation chinois, en créant des opportunités de partenariats stratégiques et d'investissements.</p>
+                    </div>
+                </div>
+                
+                <div class="about-features fade-in-right">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <div style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
+                            <h4 style="color: #2c3e50; margin-bottom: 10px; font-size: 1.1rem;">Partenariats</h4>
+                            <p style="color: #7f8c8d; font-size: 0.9rem;">Facilitation de partenariats stratégiques entre entreprises internationales et chinoises</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <div style="font-size: 2.5rem; margin-bottom: 15px;">💡</div>
+                            <h4 style="color: #2c3e50; margin-bottom: 10px; font-size: 1.1rem;">Innovation</h4>
+                            <p style="color: #7f8c8d; font-size: 0.9rem;">Accès privilégié aux dernières innovations technologiques chinoises</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <div style="font-size: 2.5rem; margin-bottom: 15px;">🌍</div>
+                            <h4 style="color: #2c3e50; margin-bottom: 10px; font-size: 1.1rem;">Découverte</h4>
+                            <p style="color: #7f8c8d; font-size: 0.9rem;">Immersion culturelle et découverte de la Chine moderne</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <div style="font-size: 2.5rem; margin-bottom: 15px;">🚀</div>
+                            <h4 style="color: #2c3e50; margin-bottom: 10px; font-size: 1.1rem;">Opportunités</h4>
+                            <p style="color: #7f8c8d; font-size: 0.9rem;">Identification d'opportunités d'investissement et de business</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" style="background: white; padding: 80px 0;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 300; margin-bottom: 20px; color: #7f8c8d;">Contactez-nous</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #7f8c8d; margin-bottom: 60px;">Prêt à partir ? Contactez-nous pour réserver votre expédition ou pour plus d'information</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 style="color: #7f8c8d;">Contact WeChat</h3>
+                    <p style="margin-bottom: 30px; color: #7f8c8d;">Scannez le QR code pour nous contacter directement</p>
+                    
+                    <img src="https://ngud.github.io/testBeforeInvest/wechat.jpg" alt="QR Code WeChat" class="qr-code" style="max-width: 250px; width: 100%; height: auto; margin: 0 auto 30px; border: 2px solid #3498db; border-radius: 12px; display: block;">
+                    
+                    <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                        <h4 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.1rem;">Service Premium</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 8px 0; color: #7f8c8d;">✓ Consultation gratuite 30 min</li>
+                            <li style="padding: 8px 0; color: #7f8c8d;">✓ Réponse sous 2h (7j/7)</li>
+                            <li style="padding: 8px 0; color: #7f8c8d;">✓ Accès direct aux organisateurs</li>
+                        </ul>
+                </div>
+                
+
+            </div>
+            
+                <div class="contact-info">
+                    <h3>Formulaire de contact</h3>
+                    <form id="contactForm" onsubmit="submitContactForm(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-name">Nom complet *</label>
+                            <input type="text" class="form-input" id="contact-name" name="name" required autocomplete="name">
+            </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Email *</label>
+                            <input type="email" class="form-input" id="contact-email" name="email" required autocomplete="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Téléphone</label>
+                            <input type="tel" class="form-input" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Formule souhaitée</label>
+                            <select class="form-select" name="package">
+                                <option value="">Sélectionnez une formule</option>
+                                <option value="Découverte Académique - Sur devis pour un groupe 20 personnes">Découverte Académique - Sur devis pour un groupe 20 personnes</option>
+                                <option value="Parcours Business - 3599€HT (3299€HT early bird)">Parcours Business - 3599€HT (3299€HT early bird)</option>
+                                <option value="Programme Corporate - Sur devis">Programme Corporate - Sur devis</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">📅 Sessions disponibles</label>
+                            <select class="form-select" name="session">
+                                <option value="">Sélectionnez une session</option>
+                                <option value="Session 1 : 13 septembre au 20 septembre 2025">Session 1 : 13 septembre au 20 septembre 2025</option>
+                                <option value="Session 2 : 25 octobre au 1er novembre 2025">Session 2 : 25 octobre au 1er novembre 2025</option>
+                                <option value="Session 3 : 8 novembre au 15 novembre 2025">Session 3 : 8 novembre au 15 novembre 2025</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Date de départ souhaitée</label>
+                            <input type="date" class="form-input" name="departure">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-textarea" name="message" placeholder="Décrivez vos besoins spécifiques, votre entreprise, vos objectifs..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                            Envoyer le message
+                        </button>
+                    </form>
+                    
+                    <div class="success-message" id="successMessage" style="display: none; background: #27ae60; color: white; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                        Message envoyé avec succès ! Nous vous recontacterons rapidement.
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #667eea; color: white; padding: 3rem 2rem; text-align: center;">
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+            <img src="images/chineExploration-X-Huaerdai.png" alt="Logo Chine Exploration x Huaerdai" style="height: 70px; width: auto;" loading="lazy">
+            <p style="font-size: 1.1rem;">Learning Expedition China - Votre passerelle vers l'écosystème tech chinois</p>
+            
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <a href="#accueil" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">Accueil</a>
+                <a href="#pourquoi" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">À propos</a>
+                <a href="#formules" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">Formules</a>
+                <a href="#entreprises" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">Entreprises</a>
+                <a href="#contact" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">Contact</a>
+            </div>
+            
+            <div style="padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 10px; text-align: center; max-width: 600px;">
+                <h4 style="margin-bottom: 1.5rem; color: #ffd93d;">Informations légales</h4>
+                <div style="font-size: 0.9rem; line-height: 1.6;">
+                    <strong>ZSJ - SAS</strong><br>
+                    15 RUE KLEBER, 93100 MONTREUIL<br>
+                    SIREN : 823 899 570 | N° TVA : FR12823899570<br>
+                    RCS Bobigny 823 899 570
+                </div>
+            </div>
+            
+            <p style="opacity: 0.7;">© 2025 Learning Expedition China. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements that should animate
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Language selector functionality
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Language change function
+        function changeLanguage(url) {
+            if (url) {
+                window.location.href = url;
+            }
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'white';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Form submission function
+        function submitContactForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.name.value;
+            const email = form.email.value;
+            const phone = form.phone.value;
+            const pack = form.package.value;
+            const session = form.session.value;
+            const departure = form.departure.value;
+            const message = form.message.value;
+
+            let body = '';
+            body += 'Nom complet : ' + name + '%0D%0A';
+            body += 'Email : ' + email + '%0D%0A';
+            if(phone) body += 'Téléphone : ' + phone + '%0D%0A';
+            if(pack) body += 'Formule souhaitée : ' + pack + '%0D%0A';
+            if(session) body += 'Session choisie : ' + session + '%0D%0A';
+            if(departure) body += 'Date de départ souhaitée : ' + departure + '%0D%0A';
+            if(message) body += 'Message : ' + encodeURIComponent(message) + '%0D%0A';
+
+            const mailto = `mailto:contact@chineexp.com?subject=Learning%20Expedition&body=${body}`;
+            window.location.href = mailto;
+            
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html> 
